@@ -1,0 +1,91 @@
+# ===========================
+# Build directories
+# ===========================
+build/
+cmake-build-*/
+out/
+dist/
+
+# ===========================
+# CMake generated files
+# ===========================
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+CTestTestfile.cmake
+
+# ===========================
+# Object files
+# ===========================
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.dylib
+*.exe
+*.out
+
+# ===========================
+# Debug / profiling
+# ===========================
+*.dSYM/
+*.prof
+*.gcda
+*.gcno
+*.gcov
+*.stackdump
+
+# ===========================
+# Logs
+# ===========================
+*.log
+
+# ===========================
+# IDE files
+# ===========================
+
+## VS Code
+.vscode/
+
+## CLion / JetBrains
+.idea/
+*.iml
+
+## Xcode
+DerivedData/
+*.xcworkspace
+*.xcodeproj
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+
+# ===========================
+# macOS
+# ===========================
+.DS_Store
+
+# ===========================
+# Temporary files
+# ===========================
+*.tmp
+*.temp
+*.swp
+*~
+
+# ===========================
+# Benchmark outputs
+# ===========================
+benchmark_results/
+perf_reports/
+
+# ===========================
+# Runtime configs (optional)
+# ===========================
+.env
+.env.local
