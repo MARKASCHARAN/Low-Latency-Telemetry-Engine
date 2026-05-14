@@ -1,20 +1,10 @@
-#include <iostream>
-
-#include "llte/network/udp_receiver.hpp"
+#include "llte/core/engine.hpp"
 
 int main() {
-    UdpReceiver receiver(8080);
 
-    TelemetryPacket packet;
+    Engine engine;
 
-    while (true) {
-        if (receiver.receive(packet)) {
-            std::cout
-                << "Received | Speed: " << packet.speed
-                << " | RPM: " << packet.rpm
-                << " | Gear: " << packet.gear
-                << " | Fuel: " << packet.fuel
-                << "\n";
-        }
-    }
+    engine.start();
+
+    return 0;
 }
