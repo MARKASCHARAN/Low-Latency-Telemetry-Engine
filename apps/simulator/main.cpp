@@ -50,7 +50,7 @@ int main()
             << " km/h\n";
 
         std::this_thread::sleep_for(
-            std::chrono::milliseconds(10));
+            std::chrono::milliseconds(0));
     }
 
     return 0;
