@@ -5,7 +5,7 @@
 ![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS-lightgrey.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-**LLTE (Low-Latency Telemetry Engine)** is a high-throughput, low-latency telemetry ingestion and processing pipeline built in modern C++20. Designed with principles used in autonomous vehicle infrastructure and high-frequency trading (HFT), LLTE handles real-time data streaming, zero-allocation fast paths, lock-free queueing, and concurrent analytics pipeline execution.
+## High-throughput C++20 telemetry ingestion pipeline with lock-free concurrency, achieving 119K packets/sec and ~10× lower average latency.
 
 
 ## Performance Benchmark Results
@@ -22,7 +22,9 @@
 | Dropped Packets | 0 | 0 |
 | Improvement | — | **2.4× throughput / ~10× avg latency reduction** |
 
-## 📈 Detailed Benchmark Reports
+## Benchmark Results & Analysis
+
+![LLTE Benchmark Results](./benchmarks/llte-benchmark-results.png)
 
 - [Benchmark Summary](./benchmarks/benchmark_summary.md)
 
@@ -101,6 +103,19 @@ Planned hot-path rewrite in Rust:
 
 Goal: **C++ vs Rust low-latency systems performance study**
 
+##  Run Benchmarks
+
+```bash
+mkdir build && cd build
+cmake ..
+make -j
+
+# terminal 1
+./llte_receiver
+
+# terminal 2
+./llte_simulator
+```
 
 ## 👨‍💻 Author
 
