@@ -7,7 +7,8 @@
 #include "llte/network/udp_sender.hpp"
 #include "llte/telemetry/packet.hpp"
 
-int main() {
+int main()
+{
     UdpSender sender("127.0.0.1", 8080);
 
     std::random_device rd;
@@ -16,15 +17,16 @@ int main() {
     std::uniform_real_distribution<float> speed_dist(100.0f, 340.0f);
     std::uniform_real_distribution<float> temp_dist(80.0f, 120.0f);
 
-    while (true) {
+    while (true)
+    {
         TelemetryPacket packet{};
 
         packet.timestamp =
             std::chrono::duration_cast<
-                std::chrono::milliseconds>(
-                std::chrono::system_clock::now()
-                    .time_since_epoch()
-            ).count();
+                std::chrono::microseconds>(
+                std::chrono::steady_clock::now()
+                    .time_since_epoch())
+                .count();
 
         packet.speed = speed_dist(gen);
         packet.rpm = 12000 + rand() % 3000;
@@ -48,8 +50,7 @@ int main() {
             << " km/h\n";
 
         std::this_thread::sleep_for(
-            std::chrono::milliseconds(10)
-        );
+            std::chrono::milliseconds(10));
     }
 
     return 0;
