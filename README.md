@@ -24,7 +24,7 @@
 
 ## Benchmark Results & Analysis
 
-![LLTE Benchmark Results](./benchmarks/llte-benchmark-results.png)
+![LLTE Benchmark Results](./benchmarks/lte-benchmark-results.png)
 
 - [Benchmark Summary](./benchmarks/benchmark_summary.md)
 
